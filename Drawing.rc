@@ -1,0 +1,301 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 261, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 10, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,197,58,50,14
+    CTEXT           "Digital Audio Filter  Ver 1.02",IDC_STATIC,61,7,94,8
+    LTEXT           "Creator : Chulwoong Jeon",IDC_STATIC,10,20,86,8
+    LTEXT           "E-Mail : cwjeon@ece.uvic.ca",IDC_STATIC,13,31,96,8
+    CTEXT           "Any comments or suggestions will be welcome!",
+                    IDC_STATIC,14,48,166,8
+    CONTROL         138,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,198,11,46,40
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\PIC.bmp"
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DRAWING_DIALOG DIALOGEX 0, 0, 513, 371
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Frequency Monitor"
+FONT 8, "Arial", 0, 0, 0x1
+BEGIN
+    SCROLLBAR       IDC_SCROLLTIME,7,151,341,8
+    CONTROL         "",IDC_TIMEWINDOW,"Static",SS_BLACKFRAME | SS_NOTIFY,7,8,
+                    341,143
+    PUSHBUTTON      "FILE OPEN",IDC_BUTTON1,353,16,50,14
+    LTEXT           "Sample Position:                           ",
+                    IDC_FILEPOS,7,163,147,8
+    CONTROL         "Spin1",IDC_LENGTH,"msctls_updown32",UDS_ARROWKEYS,339,
+                    161,9,14
+    CTEXT           "128",IDC_READSIZE,304,162,33,13,SS_SUNKEN | WS_BORDER
+    LTEXT           "FFT SIZE",IDC_STATIC,261,163,36,8
+    LTEXT           "Sample Rate: ",IDC_SAMPLE,353,68,68,8
+    LTEXT           "Resolutions:       ",IDC_RES,353,77,68,8
+    LTEXT           "# of CHs:",IDC_STEREO,355,87,50,8
+    GROUPBOX        "Monitor Ch",IDC_STATIC,353,31,58,35,BS_CENTER | 
+                    WS_GROUP
+    CONTROL         "Left   Ch",IDC_RADIOL,"Button",BS_AUTORADIOBUTTON,361,
+                    40,39,9
+    CONTROL         "Right Ch",IDC_RADIOR,"Button",BS_AUTORADIOBUTTON,361,53,
+                    43,10
+    CONTROL         "",IDC_FFTWINDOW,"Static",SS_BLACKFRAME,7,179,341,123
+    PUSHBUTTON      "Play",IDC_BUTTON2,354,100,30,14
+    PUSHBUTTON      "Stop",IDC_BUTTON3,386,100,30,14
+    EDITTEXT        IDC_EDIT1,355,126,28,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set",IDC_BUTTON4,386,126,30,14
+    LTEXT           "# of Audio Buffers",IDC_STATIC,355,116,61,8
+    LTEXT           "Time Domain",IDC_STATIC,353,8,69,8
+    LTEXT           "Frequency Domain",IDC_STATIC,353,178,69,8
+    GROUPBOX        "Monitor Type",IDC_STATIC,353,187,58,35,BS_CENTER | 
+                    WS_GROUP
+    CONTROL         "Magnitude",IDC_RADIOMAG,"Button",BS_AUTORADIOBUTTON,361,
+                    196,47,10
+    CONTROL         "Phase",IDC_RADIOPHA,"Button",BS_AUTORADIOBUTTON,361,208,
+                    36,10
+    LTEXT           "Point Freq Info      Hz      dB",IDC_DATA,7,304,144,8
+    LTEXT           "Select Window Type",IDC_STATIC,353,280,71,8
+    COMBOBOX        IDC_SELWIN,353,289,70,45,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Select Filter Type",IDC_STATIC,353,253,69,8
+    COMBOBOX        IDC_SELFIL,353,263,70,61,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_LOFREQ,124,325,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HIFREQ,169,325,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Filter Set",IDC_BUTTON5,325,348,40,14
+    LTEXT           "Cutoff Frequencies",IDC_STATIC,185,308,77,8
+    LTEXT           "Cutoff 1",IDC_STATIC,125,317,41,8
+    LTEXT           "Cutoff 2",IDC_STATIC,169,317,39,8
+    LTEXT           "Cutoff 3",IDC_STATIC,279,317,39,8
+    EDITTEXT        IDC_FREQ4,325,325,40,14,ES_AUTOHSCROLL
+    LTEXT           "Cutoff 4",IDC_STATIC,326,317,47,8
+    EDITTEXT        IDC_FREQ3,278,325,40,14,ES_AUTOHSCROLL
+    LTEXT           "FIR Filter Length",IDC_STATIC,9,317,59,8
+    EDITTEXT        IDC_FILLEN,16,325,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_GAINA,79,325,40,14,ES_AUTOHSCROLL
+    LTEXT           "Gain A",IDC_STATIC,82,316,40,8
+    EDITTEXT        IDC_GAINB,232,325,40,14,ES_AUTOHSCROLL
+    LTEXT           "Gain B",IDC_STATIC,235,317,42,8
+    LTEXT           "BiQuad Parameters",IDC_STATIC,7,348,70,8
+    EDITTEXT        IDC_BQGAIN,79,349,40,14,ES_AUTOHSCROLL
+    LTEXT           "Gain",IDC_STATIC,82,341,16,8
+    EDITTEXT        IDC_BQRES,124,349,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BQANT,169,349,40,14,ES_AUTOHSCROLL
+    LTEXT           "Resonance",IDC_STATIC,124,341,38,8
+    LTEXT           "Antiresonance",IDC_STATIC,167,341,48,8
+    EDITTEXT        IDC_PDAMP,232,349,40,14,ES_AUTOHSCROLL
+    LTEXT           "Pole Damping",IDC_STATIC,228,341,46,8
+    EDITTEXT        IDC_ZDAMP,278,349,40,14,ES_AUTOHSCROLL
+    LTEXT           "Zero Damping",IDC_STATIC,278,341,46,8
+    LISTBOX         IDC_LIST1,429,17,76,283,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Impulse Response",IDC_STATIC,431,8,66,8
+    PUSHBUTTON      "About",IDC_BUTTON6,458,350,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DRAWING_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 508
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 364
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Drawing.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Drawing MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Drawing\0"
+            VALUE "LegalCopyright", "Copyright (C) 1903\0"
+            VALUE "OriginalFilename", "Drawing.EXE\0"
+            VALUE "ProductName", "Drawing Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "RES\\Sig.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Drawing.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

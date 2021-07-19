@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Drawing - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/Drawing.res" /d "_DEBUG" /d "_AFXDLL" "D:\ProjectSource\AppSource\VC\Digital Audio Filter\Drawing.rc"" 
+Creating temporary file "C:\DOCUME~1\skymoon\LOCALS~1\Temp\RSP11F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Debug/VC6 Digital Filter.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\AboutBox.cpp"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\audio.cpp"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\delay.cpp"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\Drawing.cpp"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\DrawingDlg.cpp"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\fft.cpp"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\filter.cpp"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\graph.CPP"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\WaveCtrl.cpp"
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\WaveFile.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\skymoon\LOCALS~1\Temp\RSP11F.tmp" 
+Creating temporary file "C:\DOCUME~1\skymoon\LOCALS~1\Temp\RSP120.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Debug/VC6 Digital Filter.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"D:\ProjectSource\AppSource\VC\Digital Audio Filter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\skymoon\LOCALS~1\Temp\RSP120.tmp" 
+Creating temporary file "C:\DOCUME~1\skymoon\LOCALS~1\Temp\RSP121.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/VC6 Digital Filter.pdb" /debug /machine:I386 /out:"Debug/VC6 Digital Filter.exe" 
+".\Debug\AboutBox.obj"
+".\Debug\audio.obj"
+".\Debug\delay.obj"
+".\Debug\Drawing.obj"
+".\Debug\DrawingDlg.obj"
+".\Debug\fft.obj"
+".\Debug\filter.obj"
+".\Debug\graph.obj"
+".\Debug\StdAfx.obj"
+".\Debug\WaveCtrl.obj"
+".\Debug\WaveFile.obj"
+".\Debug\Drawing.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\skymoon\LOCALS~1\Temp\RSP121.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+AboutBox.cpp
+audio.cpp
+delay.cpp
+D:\ProjectSource\AppSource\VC\Digital Audio Filter\delay.cpp(149) : warning C4101: 'idx' : unreferenced local variable
+Drawing.cpp
+DrawingDlg.cpp
+fft.cpp
+D:\ProjectSource\AppSource\VC\Digital Audio Filter\fft.cpp(135) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+filter.cpp
+D:\ProjectSource\AppSource\VC\Digital Audio Filter\filter.cpp(32) : warning C4305: 'initializing' : truncation from 'const double' to 'float'
+D:\ProjectSource\AppSource\VC\Digital Audio Filter\filter.cpp(43) : warning C4305: 'initializing' : truncation from 'const double' to 'float'
+graph.CPP
+WaveCtrl.cpp
+D:\ProjectSource\AppSource\VC\Digital Audio Filter\WaveCtrl.cpp(202) : warning C4172: returning address of local variable or temporary
+D:\ProjectSource\AppSource\VC\Digital Audio Filter\WaveCtrl.cpp(791) : warning C4172: returning address of local variable or temporary
+WaveFile.cpp
+D:\ProjectSource\AppSource\VC\Digital Audio Filter\WaveFile.cpp(72) : warning C4172: returning address of local variable or temporary
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+VC6 Digital Filter.exe - 0 error(s), 7 warning(s)
+</pre>
+</body>
+</html>
