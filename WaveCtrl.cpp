@@ -265,7 +265,7 @@ bool CWaveIn::PrepareHDR(MMRESULT *ChkCode)
 		return false;
 	}
 			
-	pHdr->lpData			= pBuffer;
+	pHdr->lpData			= (LPSTR)pBuffer;
 	pHdr->dwBufferLength	= m_BufferSize;
 	pHdr->dwFlags			= 0;
 			
@@ -473,7 +473,7 @@ LRESULT CWaveIn::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 		case MM_WIM_DATA:
 			
 			pHdr	= (WAVEHDR*)lParam;
-			pBuffer = pHdr->lpData;
+			pBuffer = (WAVEBUFFER*)pHdr->lpData;
 			Len		= pHdr->dwBufferLength;
 			
 			if (m_AttemptClose != true)
@@ -533,7 +533,7 @@ void CWaveIn::ProcCallBack(UINT uMsg, DWORD dwParam1, DWORD dwParam2)
 		case WIM_DATA:
 			
 			pHdr	= (WAVEHDR*)dwParam1;
-			pBuffer = pHdr->lpData;
+			pBuffer = (WAVEBUFFER*)pHdr->lpData;
 			Len		= pHdr->dwBufferLength;
 			
 			if (m_AttemptClose != true)
@@ -1057,7 +1057,7 @@ void CWaveOut::ProcCallBack(UINT uMsg, DWORD dwParam1, DWORD dwParam2)
 		case WOM_DONE:
 			
 			pHdr	= (WAVEHDR*)dwParam1;
-			pBuffer = pHdr->lpData;
+			pBuffer = (WAVEBUFFER*)pHdr->lpData;
 			Len		= pHdr->dwBufferLength;
 
 			if (m_AttemptClose != true)
@@ -1098,7 +1098,7 @@ LRESULT CWaveOut::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 		case MM_WOM_DONE:
 			
 			pHdr	= (WAVEHDR*)lParam;
-			pBuffer = pHdr->lpData;
+			pBuffer = (INT8*)pHdr->lpData;
 			Len		= pHdr->dwBufferLength;
 
 			if (m_AttemptClose != true)
@@ -1143,7 +1143,7 @@ bool CWaveOut::SetHDR(WAVEBUFFER *pBuffer,int Len, MMRESULT *ChkCode)
 	for ( i = 0 ; i < Len ; i++ )
 		pSetBuffer[i] = pBuffer[i];
 
-	pHdr->lpData			= pSetBuffer;
+	pHdr->lpData			= (LPSTR)pSetBuffer;
 	pHdr->dwBufferLength	= Len;
 	pHdr->dwFlags			= 0;
 

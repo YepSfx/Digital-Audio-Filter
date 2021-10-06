@@ -33,7 +33,7 @@
 #define		DEF_FILTER_HILLBERT			7
 #define		DEF_FILTER_TIMEDIFF			8
 
-typedef char				INT8;
+//typedef char				INT8;
 typedef unsigned char		UINT8;
 typedef unsigned char		BYTE;
 typedef short				INT16;

@@ -14,7 +14,7 @@
 enum FILEACCESS			{FILE_READ = 0 , FILE_WRITE = 1 , 
 						 FILE_CLOSE	= 2};
 
-typedef char			WAVEBUFFER;
+typedef INT8			WAVEBUFFER;
 typedef char			STRING[256];
 typedef long			LONGINT;
 

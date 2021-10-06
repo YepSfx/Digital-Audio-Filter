@@ -34,7 +34,7 @@ enum		HANDLETYPE		{HANDLE_CALLBACK, HANDLE_WINDOW};
 enum		MEMERROR		{ERROR_FREE, ERROR_PREPARE};
 enum		PROCPRIORITY	{NORMAL = 0, REALTIME = 1};
 
-typedef char			WAVEBUFFER;
+typedef INT8			WAVEBUFFER;
 typedef char			STRING[256];
 
 // WaveCtrl.h : header file
